@@ -1,39 +1,3 @@
-// const	input = document.getElementById("input");
-// const	items = document.getElementById("items");
-
-// function addItem()
-// {
-// 	if (input.value)
-// 	{
-// 		items.innerHTML += `<li>${input.value}</li>`;
-// 		// alert(input.value);
-// 		input.value = null;
-// 	}
-// }
-
-
-// function renderItems() {
-//     itemsDiv.innerHTML = null;
-
-//     for (const [idx, item] of Object.entries(items)) {
-//         const container = document.createElement("div")
-//         container.style.marginBottom = "10px"
-        
-//         const text = document.createElement("p")
-//         text.style.display = "inline"
-//         text.style.marginRight = "10px"
-//         text.textContent = item;
-
-//         const button = document.createElement("button")
-//         button.textContent = "Delete"
-//         button.onclick = () => removeItem(idx)
-
-//         container.appendChild(text)
-//         container.appendChild(button)
-        
-//         itemsDiv.appendChild(container)
-//     }
-// }
 
 const	input = document.getElementById("input");
 const	container = document.getElementById("items");
@@ -45,6 +9,7 @@ function removeItem(index)
 	renderItems();
 	saveItem();
 }
+
 function renderItems()
 {
 	container.innerHTML = null;
@@ -68,6 +33,7 @@ function renderItems()
 		container.appendChild(div);
 	}
 }
+
 function saveItem()
 {
 	const stringItmes = JSON.stringify(items);
@@ -81,6 +47,7 @@ function loadItems()
 		items = JSON.parse(itemsGotten);
 	renderItems();
 }
+
 function addItem()
 {
 	const value = input.value;
